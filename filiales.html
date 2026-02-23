@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCINALSS | Filiales</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-ring-wrapper">
+                <svg class="loader-ring" viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00e0ff" />
+                            <stop offset="100%" stop-color="#0066ff" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="loader-ring-bg" cx="60" cy="60" r="52" />
+                    <circle class="loader-ring-fill" cx="60" cy="60" r="52" stroke="url(#ringGrad)" />
+                </svg>
+                <img src="assets/logo.png" alt="ASCINALSS Logo" class="loader-logo">
+            </div>
+            <h2 class="loader-text">
+                <span class="lt-a">A</span><span class="lt-s1">S</span><span class="lt-c">C</span><span
+                    class="lt-i">I</span><span class="lt-n">N</span><span class="lt-a2">A</span><span
+                    class="lt-l">L</span><span class="lt-s2">S</span><span class="lt-s3">S</span>
+            </h2>
+            <p class="loader-subtitle">Cargando sistema&hellip;</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="ASCINALSS" style="height: 50px;">
+            <span class="brand-name">ASCINALSS</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Página Principal</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="filiales.html" class="active">Filiales</a></li>
+            <li><a href="convenios.html">Alianzas</a></li>
+            <li class="nav-btn-mobile"><a href="#" class="btn btn-primary"
+                    style="padding: 0.7rem 1.5rem; font-size: 0.85rem; width: 100%; text-align: center;">Intranet</a>
+            </li>
+        </ul>
+        <div class="nav-actions">
+            <div class="military-bar">
+                <img src="assets/escudo-ejto.png" class="military-tag" style="height: 45px; background: none;"
+                    title="Ejército">
+                <img src="assets/escudo-fab.png" class="military-tag" style="height: 45px; background: none;"
+                    title="Fuerza Aérea">
+                <img src="assets/escudo-armada.png" class="military-tag" style="height: 45px; background: none;"
+                    title="Armada">
+            </div>
+            <a href="#" class="btn btn-primary nav-btn-desktop"
+                style="padding: 0.7rem 1.5rem; font-size: 0.85rem;">Intranet</a>
+            <button class="menu-toggle" aria-label="Abrir menú"
+                onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero" style="min-height: 40vh; padding-top: 200px;">
+            <div class="pattern-grid"
+                style="opacity: 0.03; background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px);"></div>
+            <div class="bg-blob blob-1"></div>
+            <div class="bg-icons-container">
+                <i class="fas fa-sack-dollar bg-icon bg-icon-1"></i>
+                <i class="fas fa-shield-halved bg-icon bg-icon-2"></i>
+                <i class="fas fa-hand-holding-dollar bg-icon bg-icon-3"></i>
+            </div>
+
+            <div class="hero-text" style="flex: 1; text-align: center;">
+                <span class="hero-tag" style="background: rgba(255,255,255,0.1); color: var(--accent-blue);">Presencia
+                    Nacional</span>
+                <h1 style="font-size: 4rem;">Nuestras Filiales</h1>
+                <p style="margin-inline: auto; font-size: 1.15rem; color: rgba(255, 255, 255, 0.8);">Estamos presentes
+                    en todo el territorio nacional para brindarte apoyo
+                    donde lo necesites.</p>
+            </div>
+        </header>
+
+        <section class="animated-bg" style="padding: 80px 8% 120px;">
+            <div class="pattern-grid"></div>
+            <div class="bg-blob blob-2" style="top: auto; bottom: 0; left: auto; right: 0;"></div>
+            <div class="bg-icons-container">
+                <i class="fas fa-vault bg-icon bg-icon-dark bg-icon-4"></i>
+                <i class="fas fa-file-invoice-dollar bg-icon bg-icon-dark bg-icon-1"
+                    style="font-size: 22rem; left: auto; right: 10%; top: 20%;"></i>
+                <i class="fas fa-coins bg-icon bg-icon-dark bg-icon-3" style="font-size: 16rem; top: 70%;"></i>
+            </div>
+            <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+
+                <!-- La Paz -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/lapaz.png') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            La Paz - Sede Central</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Calle
+                            Díaz Romero Nro. 1783<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Rocio
+                            Condori Limachi<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71528059
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Salón de Banderas, Salón Dorado<br>
+                            - Hotel Casa Comunitaria<br>
+                            - Multifamiliar Juancito Pinto<br>
+                            - Complejo Cota Cota
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Santa Cruz -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/santacruz.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Santa Cruz</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> C. M.
+                            Ignacio Salvatierra Nro. 997<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 1ro.
+                            DEPPS. Miguel Alavi<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71225133 / 71605991
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje (11 habitaciones)<br>
+                            - Complejo Deportivo V. 1ro de Mayo<br>
+                            - Mausoleo de 60 Sarcofagos
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cochabamba -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/cochabamba.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Cochabamba</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> C.
+                            Mariano Melgarejo Nro. 1795<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 1ro.
+                            DEPSS. Alex Choque<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71224845 / 67531716
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - 40 habitaciones hospedaje<br>
+                            - Sala de reuniones<br>
+                            - Mausoleo, 2 Tiendas (El Pueblito)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Oruro -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/oruro.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Oruro</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Sgto. Flores Nro. 403<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 2do.
+                            DESA. Georgina Salas<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71224754 / 73029818
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - 40 habs. hospedaje permanente<br>
+                            - Salón de eventos<br>
+                            - Mausoleo
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Potosí -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/potosi.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Potosí</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> C.
+                            Smith Esq. Chayanta Nro. 403<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 2do.
+                            DEPSS. Juan V. Mamani<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            73758666
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - 40 habs. hospedaje permanente<br>
+                            - Tiendas y Salón de billar<br>
+                            - Mausoleo y Garaje
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tarija -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/tarija.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Tarija</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Bº San
+                            Geronimo, IV BRIGADA<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 1ro.
+                            DESA. Javier Mamani<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            72596209
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje Transitorio (5 habs.)<br>
+                            - 1 Salón Principal
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Sucre -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/sucre.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Sucre</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Calle
+                            Almirante Grau Nro. 126<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. My.
+                            DESA. Jaime Gutierrez<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71269707
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - 1 Salón de Eventos<br>
+                            - 4 Áreas Comerciales (Tiendas)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cobija -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/cobija.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Cobija</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Calle
+                            Villa De la Cruz<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 2do.
+                            DEPSS. Porfirio Quispe<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            74779662
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje Permanente (4 habs.)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trinidad -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/trinidad.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Trinidad</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Marban Nro. 137, Of. 143<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 1ro.
+                            DESN. Sandro De La Cruz<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71130775
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - 10 Viviendas para solteros
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Camiri -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/camiri.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Camiri</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> C.
+                            Sucre Esq. Sargento Maceda<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. My.
+                            DEPSS. Oscar Daza<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            72256967
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - 3 habitaciones para hospedaje
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Riberalta -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/trinidad.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Riberalta</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Nicolas Suarez Esq. Sta. Cruz<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 2do.
+                            DESN. Luis Siles<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            74729961
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje Permanente (3 habs.)<br>
+                            - Oficina Regional
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Guayamerin -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/guayamerin.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Guayamerin</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Oruro Nro. 383<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 2do.
+                            DESN. Oldrin Gonzales<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            72846179
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Salón de Eventos<br>
+                            - 3 Viviendas Familiares
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puerto Quijarro -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/quijarro.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Puerto Quijarro</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Naval y Ruta V. de Cotoca<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof.
+                            Kevin Pareja Carrillo<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            63605791
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje Permanente (7 habs.)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Puerto Suarez -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/suarez.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Puerto Suarez</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Mariscal Sucre S/N<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. My.
+                            DESA. Remberto Condori<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            73668838
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Salón de Eventos<br>
+                            - Hospedaje Permanente (2 habs.)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Roboré -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/robore.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Roboré</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Calle
+                            La Paz Nro. 447<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. My.
+                            DEPSS. Saturnino Duran<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            68617331
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje Permanente (4 habs.)<br>
+                            - Hospedaje Transitorio (2 habs.)<br>
+                            - Mausoleo y Oficina
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rurrenabaque -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/rurrenabaque.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Rurrenabaque</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Aniceto Arce<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sgto.
+                            1ro. Victor Poma<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            63107533
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje Permanente y Transitorio<br>
+                            - Mausoleo y Oficina
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tupiza -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/tupiza.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Tupiza</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Calle
+                            Bolivar Nro. 134<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. My.
+                            DEPSS. Freddy Tumiri<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71124470
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Salón de eventos<br>
+                            - Hospedaje (5 cuartos)
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Villamontes -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/villamontes.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Villamontes</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Av.
+                            Ayacucho Esq. Sbtte. Barrau<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 1ro.
+                            DEPSS. Oscar Machaca<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            68950096
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje (8 cuartos para solteros)<br>
+                            - Deposito
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Yacuiba -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden; display: flex; flex-direction: column;">
+                    <div
+                        style="height: 220px; background: url('assets/filiales/yacuiba.jpg') center/cover; border-bottom: 4px solid var(--action-blue);">
+                    </div>
+                    <div style="padding: 1.5rem; display: flex; flex-direction: column; flex: 1;">
+                        <h3 class="card-title"
+                            style="margin-bottom: 0.8rem; font-size: 1.3rem; color: #a51010; text-transform: uppercase;">
+                            Yacuiba</h3>
+                        <p
+                            style="font-size: 0.9rem; margin-bottom: 1rem; color: var(--text-secondary); line-height: 1.6;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--action-blue); width: 20px;"></i> Calle
+                            Comercio y Paraguay<br>
+                            <i class="fas fa-user-circle" style="color: var(--action-blue); width: 20px;"></i> Sof. 2do.
+                            DEPSS. Fernando Aquino<br>
+                            <i class="fab fa-whatsapp" style="color: #25d366; width: 20px; font-size: 1.1rem;"></i>
+                            71160472
+                        </p>
+                        <div
+                            style="font-size: 0.85rem; color: var(--text-secondary); background: rgba(0,0,0,0.02); padding: 12px; border-radius: 8px; margin-top: auto;">
+                            - Hospedaje (10 Ambientes)<br>
+                            - 1 Sala Compartida
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <img src="assets/logo.png" alt="ASCINALSS" style="height: 60px; margin-bottom: 1.5rem;">
+                <p class="footer-desc">Acción Social y Apoyo al Personal Militar del Servicio Pasivo. Institución líder
+                    en bienestar y seguridad social en Bolivia.</p>
+                <div class="social-strip">
+                    <a href="http://facebook.com/ASCINALSS" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Institución</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Sobre Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="filiales.html">Filiales</a></li>
+                    <li><a href="convenios.html">Convenios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Emergencias</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">D.A.A.R.O.</a></li>
+                    <li><a href="#">Seguros</a></li>
+                    <li><a href="#">Reclamos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Contacto Oficial</h4>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        <span>Zona Miraflores / Calle Diaz Romero Esq. Lucas Jaimes N° 1783, La Paz - Bolivia</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>02 2228770 - 02 2228771</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-mobile-screen"></i>
+                        <span>Préstamos: 71270945 <br>Cobranzas: 71224326</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>consultas@ascinalss.org</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Copyright: Dep. Sistemas - ASCINALSS</p>
+        </div>
+    </footer>
+
+    <script>
+        const loader = document.getElementById('loader');
+        loader.style.transition = 'opacity 0.6s ease';
+        const hideLoader = () => {
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 650);
+        };
+        if (document.readyState === 'complete') {
+            setTimeout(hideLoader, 1500);
+        } else {
+            window.addEventListener('load', () => { setTimeout(hideLoader, 2000); });
+        }
+    </script>
+</body>
+
+</html>

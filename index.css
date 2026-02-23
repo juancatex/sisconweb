@@ -1,0 +1,897 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+    /* Payloan-Inspired Palette */
+    --primary-deep: #061d38;
+    /* Deep Navy Footer/Header */
+    --accent-blue: #00e0ff;
+    /* Cyan Accent */
+    --action-blue: #2563eb;
+    /* Primary Action Blue */
+    --bg-surface: #ffffff;
+    --bg-muted: #f8faff;
+    /* Light lavender/blue background */
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --text-white: #ffffff;
+
+    /* Design Tokens */
+    --radius-lg: 24px;
+    --radius-md: 12px;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -2px rgba(0, 0, 0, 0.04);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    --transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background: var(--bg-surface);
+    color: var(--text-primary);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* --- Loading Screen --- */
+#loader {
+    position: fixed;
+    inset: 0;
+    background: var(--primary-deep);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.loader-content {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+/* SVG Ring Wrapper */
+.loader-ring-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.loader-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    /* spinner rotation applied to the whole SVG */
+    animation: ringFill 1.2s linear infinite;
+    transform-origin: center;
+}
+
+.loader-ring-bg {
+    fill: none;
+    stroke: rgba(255, 255, 255, 0.07);
+    stroke-width: 6;
+}
+
+.loader-ring-fill {
+    fill: none;
+    stroke: url(#ringGrad);
+    stroke-width: 6;
+    stroke-linecap: round;
+    /* Fixed arc: shows ~75% of the circle as a visible arc segment */
+    stroke-dasharray: 245 82;
+    filter: drop-shadow(0 0 6px rgba(0, 224, 255, 0.8));
+}
+
+.loader-logo {
+    position: relative;
+    z-index: 1;
+    height: 70px;
+    width: auto;
+    animation: zoomPulse 2.2s ease-in-out infinite;
+    filter: drop-shadow(0 0 18px rgba(0, 168, 255, 0.7));
+}
+
+/* Letter-by-letter glow wave */
+.loader-text {
+    margin: 0;
+    color: white;
+    font-weight: 800;
+    font-size: 1.6rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    display: flex;
+    gap: 2px;
+}
+
+.loader-text span {
+    display: inline-block;
+    animation: letterGlow 1.8s ease-in-out infinite;
+    color: white;
+}
+
+.lt-a {
+    animation-delay: 0.0s;
+}
+
+.lt-s1 {
+    animation-delay: 0.1s;
+}
+
+.lt-c {
+    animation-delay: 0.2s;
+}
+
+.lt-i {
+    animation-delay: 0.3s;
+}
+
+.lt-n {
+    animation-delay: 0.4s;
+}
+
+.lt-a2 {
+    animation-delay: 0.5s;
+}
+
+.lt-l {
+    animation-delay: 0.6s;
+}
+
+.lt-s2 {
+    animation-delay: 0.7s;
+}
+
+.lt-s3 {
+    animation-delay: 0.8s;
+}
+
+.loader-subtitle {
+    margin: 0;
+    font-size: 0.75rem;
+    letter-spacing: 0.22em;
+    color: rgba(0, 224, 255, 0.7);
+    text-transform: uppercase;
+    animation: subtitlePulse 2s ease-in-out infinite;
+}
+
+@keyframes zoomPulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+        filter: drop-shadow(0 0 12px rgba(0, 168, 255, 0.5));
+    }
+
+    50% {
+        transform: scale(0.78);
+        filter: drop-shadow(0 0 6px rgba(0, 168, 255, 0.2));
+    }
+}
+
+@keyframes ringFill {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes letterGlow {
+
+    0%,
+    100% {
+        color: white;
+        text-shadow: none;
+        transform: translateY(0);
+    }
+
+    50% {
+        color: #00e0ff;
+        text-shadow: 0 0 12px rgba(0, 224, 255, 0.9);
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes subtitlePulse {
+
+    0%,
+    100% {
+        opacity: 0.4;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+/* --- Navbar --- */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 2000;
+    padding: 1.2rem 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(135deg, rgba(6, 29, 56, 0.95) 0%, rgba(0, 168, 255, 0.95) 100%);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    text-decoration: none;
+}
+
+.brand-icon {
+    font-size: 2.22rem;
+    color: var(--action-blue);
+}
+
+.brand-name {
+    color: white;
+    font-weight: 800;
+    font-size: 1.5rem;
+    letter-spacing: -0.02em;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    list-style: none;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: var(--transition);
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-md);
+    border: 1px solid transparent;
+    /* Reserve space for hover border */
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: #ffffff;
+    background: rgba(0, 224, 255, 0.15);
+    /* Soft cyan background */
+    border: 1px solid rgba(0, 224, 255, 0.5);
+    /* Glowing cyan border */
+    text-shadow: 0 0 8px rgba(0, 224, 255, 0.8);
+    /* Glow for the text */
+    box-shadow: 0 0 10px rgba(0, 224, 255, 0.2);
+    /* Outer glow */
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.nav-btn-mobile {
+    display: none;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.military-bar {
+    display: flex;
+    gap: 15px;
+    padding-left: 20px;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    align-items: center;
+}
+
+.military-tag {
+    transition: transform 0.3s ease;
+}
+
+.military-tag:hover {
+    transform: scale(1.15) translateY(-2px);
+}
+
+/* --- Animated Backgrounds & Graphics --- */
+.animated-bg {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(-45deg, #f8faff, #e0f2fe, #f1f5f9, #ffffff);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.pattern-grid {
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(var(--action-blue) 1.5px, transparent 1.5px);
+    background-size: 35px 35px;
+    opacity: 0.08;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-blob {
+    position: absolute;
+    filter: blur(80px);
+    border-radius: 50%;
+    z-index: 0;
+    pointer-events: none;
+    opacity: 0.5;
+    animation: floatBlob 12s ease-in-out infinite alternate;
+}
+
+.blob-1 {
+    top: -10%;
+    left: -10%;
+    width: 40vw;
+    height: 40vw;
+    background: rgba(37, 99, 235, 0.25);
+}
+
+.blob-2 {
+    bottom: -10%;
+    right: -5%;
+    width: 50vw;
+    height: 50vw;
+    background: rgba(0, 224, 255, 0.15);
+    animation-delay: -6s;
+}
+
+@keyframes floatBlob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(40px, -40px) scale(1.15);
+    }
+}
+
+/* Loan Cards Unique Style */
+.loan-card {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-md);
+    border-bottom: 5px solid var(--action-blue);
+    text-align: center;
+    transition: var(--transition);
+}
+
+.loan-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+    border-bottom-color: var(--accent-blue);
+}
+
+.loan-card i {
+    font-size: 3rem;
+    color: var(--primary-deep);
+    margin-bottom: 1.5rem;
+}
+
+
+/* --- Floating Background Icons (Financial & Military) --- */
+.bg-icons-container {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+.bg-icon {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.03);
+    /* Extremely subtle */
+    font-size: 18rem;
+    animation: floatIcon 25s infinite linear;
+}
+
+.bg-icon-dark {
+    color: rgba(0, 0, 0, 0.03);
+}
+
+.bg-icon-1 {
+    top: -5%;
+    left: 5%;
+    animation-duration: 30s;
+}
+
+.bg-icon-2 {
+    bottom: 10%;
+    right: -5%;
+    font-size: 24rem;
+    animation-duration: 35s;
+    animation-direction: reverse;
+}
+
+.bg-icon-3 {
+    top: 40%;
+    left: 40%;
+    font-size: 14rem;
+    animation-duration: 25s;
+}
+
+.bg-icon-4 {
+    bottom: -10%;
+    left: 10%;
+    font-size: 20rem;
+    animation-duration: 28s;
+}
+
+@keyframes floatIcon {
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    33% {
+        transform: translateY(-30px) rotate(10deg);
+    }
+
+    66% {
+        transform: translateY(15px) rotate(-5deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+}
+
+/* --- Hero (Payloan Style) --- */
+.hero {
+    position: relative;
+    padding: 160px 8% 100px;
+    background: linear-gradient(135deg, var(--primary-deep) 0%, #00a8ff 100%);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    min-height: 80vh;
+    overflow: hidden;
+}
+
+/* Ensure content is above background graphics */
+.hero-text,
+.hero-visual,
+.section-meta,
+.grid {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text {
+    flex: 1.2;
+}
+
+.hero-visual {
+    flex: 0.8;
+    position: relative;
+}
+
+.hero-tag {
+    display: inline-block;
+    padding: 6px 16px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--action-blue);
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    line-height: 1.05;
+    color: white;
+    margin-bottom: 1.5rem;
+    font-weight: 800;
+}
+
+.hero p {
+    font-size: 1.15rem;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2.5rem;
+    max-width: 550px;
+}
+
+.btn {
+    padding: 1rem 2.2rem;
+    border-radius: 100px;
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: var(--transition);
+    font-size: 0.95rem;
+    border: none;
+    cursor: pointer;
+}
+
+.btn-primary {
+    background: var(--action-blue);
+    color: white;
+    box-shadow: 0 10px 25px rgba(37, 99, 235, 0.3);
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(37, 99, 235, 0.4);
+}
+
+.hero-image-box {
+    width: 100%;
+    height: 450px;
+    border-radius: var(--radius-lg);
+    background-size: cover;
+    background-position: center;
+    box-shadow: var(--shadow-lg);
+    overflow: hidden;
+}
+
+/* --- Section Title --- */
+.section-meta {
+    text-align: center;
+    margin-bottom: 5rem;
+}
+
+.section-tag {
+    color: var(--action-blue);
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-size: 0.8rem;
+}
+
+.section-title {
+    font-size: 3rem;
+    color: var(--primary-deep);
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+/* --- Cards (Payloan Modern) --- */
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+}
+
+.payloan-card {
+    background: white;
+    padding: 3rem 2.5rem;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    border: 1px solid #f1f5f9;
+    transition: var(--transition);
+}
+
+.payloan-card:hover {
+    border-color: var(--action-blue);
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.card-icon-box {
+    width: 70px;
+    height: 70px;
+    background: var(--bg-muted);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.card-icon-box i {
+    font-size: 2rem;
+    color: var(--action-blue);
+}
+
+.card-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--primary-deep);
+    margin-bottom: 1.2rem;
+}
+
+.card-desc {
+    color: var(--text-secondary);
+    font-size: 1rem;
+}
+
+/* --- Footer (Payloan Style with Extracted Info) --- */
+.footer {
+    background: linear-gradient(135deg, var(--primary-deep) 0%, #007acc 100%);
+    color: white;
+    padding: 100px 8% 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.5fr;
+    gap: 4rem;
+    padding-bottom: 60px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-brand {
+    margin-bottom: 2rem;
+}
+
+.footer-logo-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: white;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+.footer-desc {
+    opacity: 0.6;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+.footer-title {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+    position: relative;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    width: 40px;
+    height: 2px;
+    background: var(--action-blue);
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 1.2rem;
+}
+
+.footer-links a {
+    color: rgba(255, 255, 255, 0.6);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.footer-links a:hover {
+    color: var(--accent-blue);
+    padding-left: 8px;
+}
+
+.contact-info {
+    list-style: none;
+}
+
+.contact-info li {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+.contact-info i {
+    color: var(--accent-blue);
+    margin-top: 3px;
+}
+
+.social-strip {
+    display: flex;
+    gap: 15px;
+    margin-top: 2rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.social-link:hover {
+    background: var(--action-blue);
+    transform: scale(1.1);
+}
+
+.footer-bottom {
+    padding-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0.4;
+    font-size: 0.8rem;
+}
+
+/* --- Responsive --- */
+@media (max-width: 1024px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding-top: 180px;
+    }
+
+    .hero-text {
+        margin-bottom: 3rem;
+        width: 100%;
+    }
+
+    .hero-visual {
+        width: 100%;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 3rem;
+    }
+
+    .navbar {
+        flex-direction: row;
+        /* keep row for desktop */
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: 0.5rem;
+    }
+
+    .nav-links {
+        display: none;
+        /* hide by default */
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 240px;
+        background: rgba(6, 29, 56, 0.98);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+        border-right: none;
+        backdrop-filter: blur(20px);
+        flex-direction: column;
+        padding: 2rem 1.5rem;
+        gap: 1.5rem;
+        border-radius: 0 0 0 16px;
+        box-shadow: -5px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        display: flex;
+        animation: slideDownMenu 0.3s ease forwards;
+    }
+
+    @keyframes slideDownMenu {
+        from {
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .nav-btn-desktop {
+        display: none !important;
+    }
+
+    .nav-btn-mobile {
+        display: block;
+        margin-top: 0.5rem;
+        padding-top: 1.5rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-actions {
+        width: auto !important;
+        justify-content: flex-end !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 2.8rem;
+    }
+
+    .section-title {
+        font-size: 2.2rem;
+    }
+
+    .military-bar {
+        display: none;
+        /* Hide extra logos on small screens */
+    }
+
+    .hero-image-box {
+        height: 350px;
+    }
+}
+
+@media (max-width: 640px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .hero-actions .btn {
+        margin-left: 0 !important;
+        width: 100%;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .grid {
+        grid-template-columns: 1fr !important;
+    }
+
+    .hero-image-box {
+        height: 250px;
+    }
+}

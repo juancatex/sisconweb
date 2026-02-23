@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ASCINALSS | Servicios</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-ring-wrapper">
+                <svg class="loader-ring" viewBox="0 0 120 120">
+                    <defs>
+                        <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#00e0ff" />
+                            <stop offset="100%" stop-color="#0066ff" />
+                        </linearGradient>
+                    </defs>
+                    <circle class="loader-ring-bg" cx="60" cy="60" r="52" />
+                    <circle class="loader-ring-fill" cx="60" cy="60" r="52" stroke="url(#ringGrad)" />
+                </svg>
+                <img src="assets/logo.png" alt="ASCINALSS Logo" class="loader-logo">
+            </div>
+            <h2 class="loader-text">
+                <span class="lt-a">A</span><span class="lt-s1">S</span><span class="lt-c">C</span><span
+                    class="lt-i">I</span><span class="lt-n">N</span><span class="lt-a2">A</span><span
+                    class="lt-l">L</span><span class="lt-s2">S</span><span class="lt-s3">S</span>
+            </h2>
+            <p class="loader-subtitle">Cargando sistema&hellip;</p>
+        </div>
+    </div>
+
+    <nav class="navbar">
+        <a href="index.html" class="nav-brand">
+            <img src="assets/logo.png" alt="ASCINALSS" style="height: 50px;">
+            <span class="brand-name">ASCINALSS</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Página Principal</a></li>
+            <li><a href="servicios.html" class="active">Servicios</a></li>
+            <li><a href="filiales.html">Filiales</a></li>
+            <li><a href="convenios.html">Alianzas</a></li>
+            <li class="nav-btn-mobile"><a href="#" class="btn btn-primary"
+                    style="padding: 0.7rem 1.5rem; font-size: 0.85rem; width: 100%; text-align: center;">Intranet</a>
+            </li>
+        </ul>
+        <div class="nav-actions">
+            <div class="military-bar">
+                <img src="assets/escudo-ejto.png" class="military-tag" style="height: 45px; background: none;"
+                    title="Ejército">
+                <img src="assets/escudo-fab.png" class="military-tag" style="height: 45px; background: none;"
+                    title="Fuerza Aérea">
+                <img src="assets/escudo-armada.png" class="military-tag" style="height: 45px; background: none;"
+                    title="Armada">
+            </div>
+            <a href="#" class="btn btn-primary nav-btn-desktop"
+                style="padding: 0.7rem 1.5rem; font-size: 0.85rem;">Intranet</a>
+            <button class="menu-toggle" aria-label="Abrir menú"
+                onclick="document.querySelector('.nav-links').classList.toggle('active')">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main>
+        <header class="hero" style="min-height: 40vh; padding-top: 200px;">
+            <div class="pattern-grid"
+                style="opacity: 0.03; background-image: radial-gradient(#ffffff 1.5px, transparent 1.5px);"></div>
+            <div class="bg-blob blob-1"></div>
+            <div class="bg-icons-container">
+                <i class="fas fa-sack-dollar bg-icon bg-icon-1"></i>
+                <i class="fas fa-shield-halved bg-icon bg-icon-2"></i>
+                <i class="fas fa-hand-holding-dollar bg-icon bg-icon-3"></i>
+            </div>
+
+            <div class="hero-text" style="flex: 1; text-align: center;">
+                <span class="hero-tag"
+                    style="background: rgba(255,255,255,0.1); color: var(--accent-blue);">Infraestructura Propia</span>
+                <h1>Servicios de Alta Calidad</h1>
+                <p style="margin-inline: auto;">Disponemos de espacios diseñados para el confort y la integración de
+                    nuestros socios.</p>
+            </div>
+        </header>
+
+        <section class="animated-bg" style="padding: 80px 8% 120px;">
+            <div class="pattern-grid"></div>
+            <div class="bg-blob blob-2" style="top: auto; bottom: 0; left: auto; right: 0;"></div>
+            <div class="bg-icons-container">
+                <i class="fas fa-vault bg-icon bg-icon-dark bg-icon-4"></i>
+                <i class="fas fa-file-invoice-dollar bg-icon bg-icon-dark bg-icon-1"
+                    style="font-size: 22rem; left: auto; right: 10%; top: 20%;"></i>
+                <i class="fas fa-coins bg-icon bg-icon-dark bg-icon-3" style="font-size: 16rem; top: 70%;"></i>
+            </div>
+            <div class="grid">
+                <!-- Salón Dorado -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden;">
+                    <div style="height: 200px; background: url('assets/salon.jpg') center/cover;"></div>
+                    <div style="padding: 2.5rem;">
+                        <h3 class="card-title">Salón Dorado</h3>
+                        <p class="card-desc">Ubicado en Calle Díaz Romero. El escenario perfecto para actos académicos,
+                            sociales y protocolares con capacidad de 150 personas.</p>
+                    </div>
+                </div>
+                <!-- Hotel -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden;">
+                    <div style="height: 200px; background: url('assets/hotel.jpg') center/cover;"></div>
+                    <div style="padding: 2.5rem;">
+                        <h3 class="card-title">Alojamiento Familiar</h3>
+                        <p class="card-desc">Hotel Casa Comunitaria con 25 habitaciones equipadas, internet de alta
+                            velocidad y un ambiente de respeto y hospitalidad.</p>
+                    </div>
+                </div>
+                <!-- Deportes -->
+                <div class="payloan-card" style="padding: 0; overflow: hidden;">
+                    <div style="height: 200px; background: url('assets/deportes.jpg') center/cover;"></div>
+                    <div style="padding: 2.5rem;">
+                        <h3 class="card-title">Complejos Deportivos</h3>
+                        <p class="card-desc">Espacios deportivos en Cota Cota y sedes regionales para el esparcimiento y
+                            la salud física de la familia militar.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <img src="assets/logo.png" alt="ASCINALSS" style="height: 60px; margin-bottom: 1.5rem;">
+                <p class="footer-desc">Acción Social y Apoyo al Personal Militar del Servicio Pasivo. Institución líder
+                    en bienestar y seguridad social en Bolivia.</p>
+                <div class="social-strip">
+                    <a href="http://facebook.com/ASCINALSS" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="footer-title">Institución</h4>
+                <ul class="footer-links">
+                    <li><a href="index.html">Sobre Nosotros</a></li>
+                    <li><a href="servicios.html">Servicios</a></li>
+                    <li><a href="filiales.html">Filiales</a></li>
+                    <li><a href="convenios.html">Convenios</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Emergencias</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Centro de Ayuda</a></li>
+                    <li><a href="#">D.A.A.R.O.</a></li>
+                    <li><a href="#">Seguros</a></li>
+                    <li><a href="#">Reclamos</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="footer-title">Contacto Oficial</h4>
+                <ul class="contact-info">
+                    <li>
+                        <i class="fas fa-location-dot"></i>
+                        <span>Zona Miraflores / Calle Diaz Romero Esq. Lucas Jaimes N° 1783, La Paz - Bolivia</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-phone"></i>
+                        <span>02 2228770 - 02 2228771</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-mobile-screen"></i>
+                        <span>Préstamos: 71270945 <br>Cobranzas: 71224326</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-envelope"></i>
+                        <span>consultas@ascinalss.org</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Copyright: Dep. Sistemas - ASCINALSS</p>
+            <p>Hecho con Disciplina y Honor</p>
+        </div>
+    </footer>
+
+    <script>
+        const loader = document.getElementById('loader');
+        loader.style.transition = 'opacity 0.6s ease';
+        const hideLoader = () => {
+            loader.style.opacity = '0';
+            setTimeout(() => { loader.style.display = 'none'; }, 650);
+        };
+        if (document.readyState === 'complete') {
+            setTimeout(hideLoader, 1500);
+        } else {
+            window.addEventListener('load', () => { setTimeout(hideLoader, 2000); });
+        }
+    </script>
+</body>
+
+</html>
